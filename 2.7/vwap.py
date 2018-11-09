@@ -46,3 +46,11 @@ print "vwap =",vwap
 print "mean =",np.mean(h)
 t=np.arange(len(h))
 print "twap =",np.average(h,weights=t)
+print "median =",np.median(h)
+sorted_close=np.msort(h)
+print "sorted =",sorted_close
+N = len(h)
+print "middle =",sorted_close[(N-1)/2]
+print "middle =",(sorted_close[(N-1)/2]+sorted_close[N/2])/2
+print "variance =",np.var(h)
+print "variance from definition =",np.mean((h-h.mean())**2)
