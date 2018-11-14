@@ -45,6 +45,18 @@ print upperBB[between_bands]
 between_bands = len(np.ravel(between_bands))
 print "Radio between bands",float(between_bands)/len(c_slice)
 
+b = c[-N:]
+b = b[::-1]
+print "b",b
+A = np.zeros((N,N),float)
+print "zeros N by N",A
+for i in range(N):
+    A[i,] = c[-N-1-i:-1-i]
+print "A",A
+(x,residuals,rank,s) = np.linalg.lstsq(A,b)
+print x,residuals,rank,s
+print np.dot(b,x)
+
 t=np.arange(N-1,C)
 plot(t,c_slice,lw=1.0)
 plot(t,sma,lw=2.0)

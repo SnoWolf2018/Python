@@ -6,3 +6,4 @@ def f(x):
 result = optimize.minimize_scalar(f)
 result.success #check if solver was successful
 x_min = result.x
+print x_min
