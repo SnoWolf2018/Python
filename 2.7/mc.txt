@@ -1,2 +1,0 @@
-This is a test file
-mc2.7 branch edit
