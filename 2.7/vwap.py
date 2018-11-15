@@ -41,10 +41,12 @@ h,l=np.loadtxt(filename,delimiter=',',usecols=(6,7),unpack=True)
 #print (np.max(h)+np.min(l))/2
 #print "Spead high price",np.ptp(h)
 #print "Spead low price",np.ptp(l)
+'''Volume-Weighted Average Price'''
 vwap=np.average(h,weights=l)
 print "vwap =",vwap
 print "mean =",np.mean(h)
 t=np.arange(len(h))
+'''Time-Weighted Average Price'''
 print "twap =",np.average(h,weights=t)
 print "median =",np.median(h)
 sorted_close=np.msort(h)
