@@ -4,7 +4,8 @@ import numpy as np
 
 script_path = os.path.abspath(os.path.dirname(__file__))
 parent_path = os.path.dirname(script_path)
-filename = parent_path+'/Code/ch3code/data.csv'
+parent_parent_path = os.path.dirname(parent_path)
+filename = parent_parent_path+'/Code/ch3code/data.csv'
 
 from matplotlib.pyplot import plot
 from matplotlib.pyplot import show

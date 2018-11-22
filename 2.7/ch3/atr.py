@@ -4,7 +4,11 @@ import os
 script_path=os.path.abspath(os.path.dirname(__file__))
 print script_path
 parent_path=os.path.dirname(script_path)
-filename=parent_path+'/Code/ch3code/data.csv'
+parent_parent_path = os.path.dirname(parent_path)
+filename=parent_parent_path+'/Code/ch3code/data.csv'
+arent_parent_path = os.path.dirname(parent_path)
+
+
 print filename
 h,l,c = np.loadtxt(filename,delimiter=',',usecols = (4,5,6),unpack=True)
 N = int(sys.argv[1])

@@ -23,8 +23,9 @@ import numpy as np
 script_path=os.path.abspath(os.path.dirname(__file__))
 #print script_path
 parent_path=os.path.dirname(script_path)
-#print parent_path
-filename=parent_path+'/Code/ch3code/data.csv'
+parent_parent_path = os.path.dirname(parent_path)
+print parent_path
+filename=parent_parent_path+'/Code/ch3code/data.csv'
 #print filename
 
 
