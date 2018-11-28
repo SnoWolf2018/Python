@@ -13,10 +13,12 @@ parent_parent_path = os.path.dirname(parent_path)
 filename_VALE=parent_parent_path + '/Code/ch4code/ch4code/VALE.csv'
 filename_BHP=parent_parent_path+ '/Code/ch4code/ch4code/BHP.csv'
 o,h,l,c= np.loadtxt(filename_BHP,delimiter=',',usecols=(3,4,5,6),unpack=True)
-
 def calc_profit(open,high,low,close):
     #以比开盘价稍低的价格买入
     buy = open * float(sys.argv[1])
+    print "buy",buy
+    print "high",high
+    print "low",low
     #daily range
     if low < buy < high:
         return (close - buy) / buy
